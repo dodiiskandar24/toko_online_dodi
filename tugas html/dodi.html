@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Toko - Toko Kecil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005bb5;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #003f80;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Profil Toko - Toko Kecil Online</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTab('home')">Home</a>
+        <a href="#" onclick="showTab('portfolio')">Portfolio</a>
+    </nav>
+
+    <div class="content">
+        <!-- Home Tab Content -->
+        <div id="home" class="tab-content">
+            <div itemscope itemtype="https://schema.org/LocalBusiness">
+                <h1 itemprop="name">Toko Kecil Online</h1>
+                <p itemprop="description">
+                    Toko Kecil Online adalah tempat belanja yang menyediakan produk-produk unik dan berkualitas untuk memenuhi kebutuhan sehari-hari Anda. Kami fokus pada pelayanan terbaik dan pengalaman belanja yang mudah.
+                </p>
+                <div>
+                    <h2>Kontak Kami</h2>
+                    <p>
+                        <strong>Alamat:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">Jl. Contoh Nomor 123</span>, 
+                            <span itemprop="addressLocality">Jakarta</span>, 
+                            <span itemprop="addressRegion">DKI Jakarta</span>, 
+                            <span itemprop="postalCode">12345</span>, 
+                            <span itemprop="addressCountry">Indonesia</span>
+                        </span>
+                    </p>
+                    <p><strong>Telepon:</strong> <a href="tel:+628123456789" itemprop="telephone">+62 812-3456-789</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@tokokecil.com" itemprop="email">info@tokokecil.com</a></p>
+                    <p><strong>Website:</strong> <a href="https://www.tokokecil.com" itemprop="url">www.tokokecil.com</a></p>
+                </div>
+                <div>
+                    <h2>Jam Operasional</h2>
+                    <ul>
+                        <li>Senin - Jumat: <span itemprop="openingHours">09:00-18:00</span></li>
+                        <li>Sabtu: <span itemprop="openingHours">10:00-16:00</span></li>
+                        <li>Minggu: Libur</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Ikuti Kami</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/tokokecil" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/tokokecil" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.twitter.com/tokokecil" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://www.tokokecil.com/logo.png" alt="Logo Toko Kecil Online" itemprop="logo">
+                </div>
+                <div>
+                    <h2>Produk Kami</h2>
+                    <ul>
+                        <li itemscope itemtype="https://schema.org/Product">
+                            <span itemprop="name">Produk 1</span> - 
+                            <span itemprop="description">Deskripsi singkat produk 1</span>
+                        </li>
+                        <li itemscope itemtype="https://schema.org/Product">
+                            <span itemprop="name">Produk 2</span> - 
+                            <span itemprop="description">Deskripsi singkat produk 2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Tab Content -->
+        <div id="portfolio" class="tab-content hidden">
+            <body bgcolor="grey" >
+                <h1 align="center" > BIODATA DIRI</h1>
+                <hr width="600 px ">
+                <table align="center" cellpadding="10px" width="600px"
+                    <tr>
+                        <td> nama  </td>
+                        <td> : dodi iskandar</td>
+                        <td rowspan="7"><img src="profil.jpg" height="200px" width="170px" ></td>
+                    </tr>
+                    <tr>
+                        <td> nim  </td>
+                        <td> : 23050809</td>
+                    </tr>
+                    <tr>
+                        <td> prodi   </td>
+                        <td> : ilmu komputer </td>
+                    </tr>
+                    <tr>
+                        <td> fakultas </td>
+                        <td> : tekologi dan bisnis</td>
+                    </tr>
+                    <tr>
+                        <td> no telepon  </td>
+                        <td> : 085210357970</td>
+                    </tr>
+                    <tr>
+                        <td> Agama  </td>
+                        <td> : islam</td>
+                    </tr>
+                    <tr>
+                        <td> pendidikan </td>
+                        <td> : SMK </td>
+                    </tr>
+                </table>
+            </body>
+            </html>
+
+    <footer>
+        <p>&copy; 2024 Toko Kecil Online. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
