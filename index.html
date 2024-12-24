@@ -1,176 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Toko - Toko Kecil</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #005bb5;
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: #003f80;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
-            document.getElementById(tabId).classList.remove('hidden');
-        }
-    </script>
+    <title>Portofolio Pribadi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Profil Toko - Toko Kecil Online</h1>
+    <header class="main-header">
+        <div class="container">
+            <h2>Selamat Datang di Portofolio Saya</h2>
+        </div>
     </header>
 
-    <nav>
-        <a href="#" onclick="showTab('home')">Home</a>
-        <a href="#" onclick="showTab('portfolio')">Portfolio</a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+            <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
+            <li><a href="#contact" class="nav-link">Kontak</a></li>
+        </ul>
     </nav>
 
-    <div class="content">
-        <!-- Home Tab Content -->
-        <div id="home" class="tab-content">
-            <div itemscope itemtype="https://schema.org/LocalBusiness">
-                <h1 itemprop="name">Toko Kecil Online</h1>
-                <p itemprop="description">
-                    Toko Kecil Online adalah tempat belanja yang menyediakan produk-produk unik dan berkualitas untuk memenuhi kebutuhan sehari-hari Anda. Kami fokus pada pelayanan terbaik dan pengalaman belanja yang mudah.
-                </p>
-                <div>
-                    <h2>Kontak Kami</h2>
-                    <p>
-                        <strong>Alamat:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                            <span itemprop="streetAddress">Jl. Contoh Nomor 123</span>, 
-                            <span itemprop="addressLocality">Jakarta</span>, 
-                            <span itemprop="addressRegion">DKI Jakarta</span>, 
-                            <span itemprop="postalCode">12345</span>, 
-                            <span itemprop="addressCountry">Indonesia</span>
-                        </span>
-                    </p>
-                    <p><strong>Telepon:</strong> <a href="tel:+628123456789" itemprop="telephone">+62 812-3456-789</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:info@tokokecil.com" itemprop="email">info@tokokecil.com</a></p>
-                    <p><strong>Website:</strong> <a href="https://www.tokokecil.com" itemprop="url">www.tokokecil.com</a></p>
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <img src="profil.jpg" alt="Foto Saya" class="profile-photo">
+                <p>Halo! Saya adalah seorang pengembang yang antusias dengan kemampuan untuk menciptakan situs web yang menakjubkan dan fungsional. Saya senang memecahkan masalah dan mewujudkan ide melalui kode.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>Portofolio Saya</h2>
+            <div class="portfolio-gallery">
+                <!-- Biodata -->
+                <div class="portfolio-item">
+                    <h3>Biodata Diri</h3>
+                    <p>Nama: John Doe</p>
+                    <p>Tempat, Tanggal Lahir: Jakarta, 1 Januari 1990</p>
+                    <p>Email: johndoe@email.com</p>
+                    <p>Telepon: +62 123 456 789</p>
                 </div>
-                <div>
-                    <h2>Jam Operasional</h2>
+
+                <!-- Riwayat Pendidikan -->
+                <div class="portfolio-item">
+                    <h3>Riwayat Pendidikan</h3>
                     <ul>
-                        <li>Senin - Jumat: <span itemprop="openingHours">09:00-18:00</span></li>
-                        <li>Sabtu: <span itemprop="openingHours">10:00-16:00</span></li>
-                        <li>Minggu: Libur</li>
+                        <li>Sarjana Teknik Informatika, Universitas XYZ (2010-2014)</li>
+                        <li>Magister Manajemen Teknologi, Universitas ABC (2015-2017)</li>
                     </ul>
                 </div>
-                <div>
-                    <h2>Ikuti Kami</h2>
+
+                <!-- Hobi -->
+                <div class="portfolio-item">
+                    <h3>Hobi</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/tokokecil" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/tokokecil" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.twitter.com/tokokecil" target="_blank">Twitter</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="https://www.tokokecil.com/logo.png" alt="Logo Toko Kecil Online" itemprop="logo">
-                </div>
-                <div>
-                    <h2>Produk Kami</h2>
-                    <ul>
-                        <li itemscope itemtype="https://schema.org/Product">
-                            <span itemprop="name">Produk 1</span> - 
-                            <span itemprop="description">Deskripsi singkat produk 1</span>
-                        </li>
-                        <li itemscope itemtype="https://schema.org/Product">
-                            <span itemprop="name">Produk 2</span> - 
-                            <span itemprop="description">Deskripsi singkat produk 2</span>
-                        </li>
+                        <li>Menulis kode dan membangun proyek pribadi</li>
+                        <li>Fotografi dan editing gambar</li>
+                        <li>Olahraga, terutama bersepeda dan sepak bola</li>
                     </ul>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Portfolio Tab Content -->
-        <div id="portfolio" class="tab-content hidden">
-            <body bgcolor="grey" >
-                <h1 align="center" > BIODATA DIRI</h1>
-                <hr width="600 px ">
-                <table align="center" cellpadding="10px" width="600px"
-                    <tr>
-                        <td> nama  </td>
-                        <td> : dodi iskandar</td>
-                        <td rowspan="7"><img src="profil.jpg" height="200px" width="170px" ></td>
-                    </tr>
-                    <tr>
-                        <td> nim  </td>
-                        <td> : 23050809</td>
-                    </tr>
-                    <tr>
-                        <td> prodi   </td>
-                        <td> : ilmu komputer </td>
-                    </tr>
-                    <tr>
-                        <td> fakultas </td>
-                        <td> : tekologi dan bisnis</td>
-                    </tr>
-                    <tr>
-                        <td> no telepon  </td>
-                        <td> : 085210357970</td>
-                    </tr>
-                    <tr>
-                        <td> Agama  </td>
-                        <td> : islam</td>
-                    </tr>
-                    <tr>
-                        <td> pendidikan </td>
-                        <td> : SMK </td>
-                    </tr>
-                </table>
-            </body>
-            </html>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Kontak Saya</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required>
 
-    <footer>
-        <p>&copy; 2024 Toko Kecil Online. All Rights Reserved.</p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2024 Nama Anda. Semua hak dilindungi.</p>
+            </div>
+            
+            <!-- Social Media Links and Image -->
+            <div class="social-links">
+                <img src="foto.jpg" alt="Foto Profil" class="footer-photo"> <!-- Add your photo here -->
+                <a href="https://www.facebook.com" target="_blank" class="social-icon fb">Facebook</a>
+                <a href="https://wa.me/123456789" target="_blank" class="social-icon wa">WhatsApp</a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon ig">Instagram</a>
+            </div>
+        </div>
     </footer>
+    
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            form.querySelectorAll('input, textarea').forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                    input.style.borderColor = 'red'; // Highlight empty fields
+                } else {
+                    input.style.borderColor = ''; // Reset border color
+                }
+            });
+            if (!isValid) {
+                e.preventDefault(); // Prevent form submission if invalid
+                alert("Harap lengkapi semua field!");
+            }
+        });
+
+        // Highlight active section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
