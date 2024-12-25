@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -120,56 +120,76 @@ body {
     color: #ccc;
     line-height: 1.8;
 }
-
-/* Portfolio Section */
-.portfolio-section {
-    padding: 60px 20px;
-    background: #2e2e2e;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    border-radius: 10px;
-}
-
-.portfolio-section h2 {
-    font-size: 2.5rem;
-    color: #00bcd4;
-    margin-bottom: 30px;
-}
-
-.portfolio-gallery {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
+/* General Styling for Portfolio Items */
 .portfolio-item {
-    width: 300px;
-    background: #1f1f1f;
-    padding: 25px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    background: #333;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    text-align: left;
+    color: #f0f0f0;
 }
 
 .portfolio-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #00bcd4;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
 }
+
+.portfolio-item ul,
+.portfolio-item table {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.portfolio-item li,
+.portfolio-item td {
+    margin: 5px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-item li:last-child,
+.portfolio-item td:last-child {
+    border-bottom: none;
+}
+
+.portfolio-item table th {
+    text-align: left;
+    font-weight: bold;
+    color: #00bcd4;
+    padding-right: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .portfolio-item {
+        padding: 15px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-item ul,
+    .portfolio-item table {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Contact Section */
 .contact-section {
@@ -232,65 +252,60 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
-.main-footer {
-    background: #333;
-    color: white;
-    padding: 20px 0;
-    font-size: 1rem;
-    margin-top: 50px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-}
-
-.social-icon {
-    text-decoration: none;
-    font-size: 1.5rem;
+footer {
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
-    margin: 0 15px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.social-icon.fb {
-    background: #3b5998; /* Facebook */
+footer p {
+    margin: 0;
+    font-size: 1em;
 }
 
-.social-icon.wa {
-    background: #25D366; /* WhatsApp */
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar ikon tidak menumpuk jika ruang sempit */
 }
 
-.social-icon.ig {
-    background: #C13584; /* Instagram */
+footer .social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
-    background: rgba(255, 255, 255, 0.2);
+footer .social-media a:hover {
+    color: #fff;
+    transform: translateY(-3px);
 }
 
-.social-icon.fb:hover {
-    background: #2d4373;
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    margin-right: 8px;
 }
 
-.social-icon.wa:hover {
-    background: #128C7E;
-}
-
-.social-icon.ig:hover {
-    background: #9c2e69;
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    footer .social-media {
+        flex-direction: column; /* Tumpuk ikon secara vertikal */
+        gap: 10px;
+    }
 }
 
 /* Image styling */
@@ -350,46 +365,76 @@ form button:hover {
             <h2>Tentang Saya</h2>
             <div class="about-content">
                 <img src="profil.jpg" alt="Foto Saya" class="profile-photo">
-                <p>Halo! Saya adalah seorang pengembang yang antusias dengan kemampuan untuk menciptakan situs web yang menakjubkan dan fungsional. Saya senang memecahkan masalah dan mewujudkan ide melalui kode.</p>
+                <p>Halo! Saya Dodi Iskandar, seorang mahasiswa di Universitas Yatsi Madani, mengambil jurusan Ilmu Komputer. Sejak kecil, saya sudah tertarik dengan dunia teknologi dan komputer, dan itu membawa saya untuk mendalami pemrograman serta pengembangan web. Saat ini, saya fokus untuk menguasai keterampilan dasar dalam HTML, CSS, dan JavaScript untuk membangun situs web interaktif dan menarik.</p>
             </div>
         </div>
     </section>
 
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2>Portofolio Saya</h2>
+            <h3>Portofolio Saya</h3>
             <div class="portfolio-gallery">
-                <!-- Biodata -->
+                <!-- Biodata Mahasiswa -->
                 <div class="portfolio-item">
-                    <h3>Biodata Diri</h3>
-                    <p>Nama: John Doe</p>
-                    <p>Tempat, Tanggal Lahir: Jakarta, 1 Januari 1990</p>
-                    <p>Email: johndoe@email.com</p>
-                    <p>Telepon: +62 123 456 789</p>
+                    <h3>Biodata Mahasiswa</h3>
+                    <table>
+                        <tr>
+                            <th>Nama Lengkap</th>
+                            <td>DODI ISKANDAR</td>
+                        </tr>
+                        <tr>
+                            <th>NIM</th>
+                            <td>23050809</td>
+                        </tr>
+                        <tr>
+                            <th>Program Studi</th>
+                            <td>Ilmu Komputer</td>
+                        </tr>
+                        <tr>
+                            <th>Fakultas</th>
+                            <td>Teknologi dan Bisnis</td>
+                        </tr>
+                        <tr>
+                            <th>Tempat, Tanggal Lahir</th>
+                            <td>Bungamas, 27 Mei 2003</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>dodi270503@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Telepon</th>
+                            <td>+62 852 1035 7970</td>
+                        </tr>
+                        <tr>
+                            <th>Alamat</th>
+                            <td>Solear Kabupaten Tangerang, Banten</td>
+                        </tr>
+                    </table>
                 </div>
-
+    
                 <!-- Riwayat Pendidikan -->
                 <div class="portfolio-item">
                     <h3>Riwayat Pendidikan</h3>
                     <ul>
-                        <li>Sarjana Teknik Informatika, Universitas XYZ (2010-2014)</li>
-                        <li>Magister Manajemen Teknologi, Universitas ABC (2015-2017)</li>
+                        <li>SD Negeri Lubuk Liku Bungamas (2009-2015)</li>
+                        <li>SMP Negeri Lubuk Liku Bungamas (2015-2018)</li>
+                        <li>SMK Cokroaminoto Muara Dua (2018-2021)</li>
                     </ul>
                 </div>
-
+    
                 <!-- Hobi -->
                 <div class="portfolio-item">
                     <h3>Hobi</h3>
                     <ul>
-                        <li>Menulis kode dan membangun proyek pribadi</li>
-                        <li>Fotografi dan editing gambar</li>
-                        <li>Olahraga, terutama bersepeda dan sepak bola</li>
+                        <li>Badminton</li>
+                        <li>Traveling</li>
+                        <li>Olahraga, terutama bersepeda dan badminton</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Kontak Saya</h2>
@@ -408,19 +453,18 @@ form button:hover {
         </div>
     </section>
 
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2024 Nama Anda. Semua hak dilindungi.</p>
-            </div>
-            
-            <!-- Social Media Links and Image -->
-            <div class="social-links">
-                <img src="foto.jpg" alt="Foto Profil" class="footer-photo"> <!-- Add your photo here -->
-                <a href="https://www.facebook.com" target="_blank" class="social-icon fb">Facebook</a>
-                <a href="https://wa.me/123456789" target="_blank" class="social-icon wa">WhatsApp</a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon ig">Instagram</a>
-            </div>
+    <footer>
+        <p>&copy; 2024 Fotofolio</p>
+        <div class="social-media">
+            <a href="https://wa.me/6285210357970" target="_blank">
+                <img src="https://png.pngtree.com/png-clipart/20181003/ourmid/pngtree-whatsapp-social-media-icon-design-template-vector-whatsapp-logo-png-image_3654780.png" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/dodiiskandar931/profilecard/?igsh=Mnp3eDFwaG90bTQw" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://www.facebook.com/dodi.andesbung" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_960_720.png" alt="Facebook"> Facebook
+            </a>
         </div>
     </footer>
     
